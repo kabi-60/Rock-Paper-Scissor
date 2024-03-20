@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<body style="background-image: url(./asset/3.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <style>
+        @keyframes shake {
+            0% { transform: translatey(0); }
+            50% { transform: translatey(-10px); }
+
+            100% { transform: translatey(5px); }
+        }
+        .shake {
+            animation: shake 0.1s ease-out infinite;
+            /* background-color: #d1d5db98; */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+    </style>
+
+    <section>
+        <div class="container">
+
+                <div class="p-2">
+                        <h1 class="font-bold text-4xl lg:text-4xl mt-2 text-black ml-2 " style="  font-family:Cinzel Decorative, serif;  text-shadow: 0 0 10px #fff, 0 0 50px #fff;  "  >N<span class="text-[#e7c771]">x</span>TGen🦾</h1>
+                </div>
+
+            <div class="shadow-xl bg-[#d1d5db98] shadow-[#d1d5db98] h-[260px] w-[700px] mx-auto mt-[180px] rounded-2xl">
+                <div class="flex " id="game-container">
+                    <img src="./asset/rock.png" alt="" class=" mt-2 h-[240px] ml-[5px] " id="user-choice">
+                    <img src="./asset/rock2.png" alt="" class="mt-2  h-[240px] ml-[150px] " id="cpu-choice">
+                </div>
+                <div id="result" class="mb-5">
+                    <!-- <h1 class=" text-center">Let's Play!</h1> -->
+                    <button class="text-3xl font-bold px-3 bg-white py-2 rounded-2xl ml-[285px] fixed top-[430px] hover:bg-black hover:text-white" style="  font-family: Cinzel Decorative, serif;"  id="start" onclick="playGame()">Let's Play</button>
+                    <h1 class="text-4xl font-bold fixed top-[370px] left-[700px] "style="font-family:Rubik Broken Fax, system-ui; "   id="display"></h1>
+                </div>
+            </div>
+            <div class="flex justify-center mt-10">
+                <div class="grid grid-cols-3 gap-2" id="option-selection">
+                    <div class="border mr-2 border-4 border-gray-400 shadow-xl shadow-[#d1d5db98]  transform transition-transform hover:scale-110" onclick="chooseOption('rock')">
+                        <img src="./asset/rock.png" alt="" class="">
+                        <h1 class="text-3xl text-white  font-bold text-center mb-2" style="  font-family: Cinzel Decorative, serif;">Rock</h1>
+                    </div>
+                    <div class="border mr-2 border-4 border-gray-400 shadow-xl shadow-[#d1d5db98] transform transition-transform hover:scale-110" onclick="chooseOption('paper')">
+                        <img src="./asset/paper.png" alt="" class="">
+                        <h1 class="text-3xl text-white  font-bold text-center mb-2" style="  font-family: Cinzel Decorative, serif;">Paper</h1>
+                    </div>
+                    <div class="border mr-2 border-4 border-gray-400 shadow-xl shadow-[#d1d5db98] transform transition-transform hover:scale-110" onclick="chooseOption('scissors')">
+                        <img src="./asset/scissors.png" alt="" class="">
+                        <h1 class="text-3xl text-white  font-bold text-center mb-2" style="  font-family: Cinzel Decorative, serif;">Scissors</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js.js"></script>
+   
+</body>
+</html>
